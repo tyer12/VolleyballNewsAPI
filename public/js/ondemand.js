@@ -17,13 +17,15 @@ async function getNews() {
         newspapers = await response.json();
       console.log(newspapers);
       for (const newspaper of newspapers) {
-        texto += ` 
-        <div class="row">
-        <div class="col">
-          <h4>${newspaper.title}</h4></div>
-          &nbsp;&nbsp;&nbsp;<p>Address: <a href= "${newspaper.url}"> ${newspaper.url}</a></p>
-          <p>Base: ${newspaper.source}</p>
-          </div>`;
+        texto += `  
+          <div class="card border-info mb-3 d-flex justify-content-center">
+          <div class="card-header"><h4>${newspaper.title}</h4></div>
+          <div class="card-body">
+          <p class="card-title">Address: <a href= "${newspaper.url}" class="link-secondary"> ${newspaper.url}</a></p>
+          <p class="card-text">Base: ${newspaper.source}</p>
+          </div>
+          </div>
+          `;
       }
       listacontent.innerHTML = texto;
     }

@@ -1,7 +1,7 @@
 window.onload = () => {
-    (async () => {const urlBase = "http://localhost:8000/news";
-    const listacontent = document.getElementById("content");
-    let texto = "";
+    (async () => {const urlBase = "http://localhost:8000/";
+    let listacontent = document.getElementById("content");
+    let conteudo = "";
     var myHeaders = new Headers();
   
     var myInit = { method: "GET", headers: myHeaders };
@@ -11,19 +11,25 @@ window.onload = () => {
     await fetch(myRequest).then(async function (response) {
       if (!response.ok) {
         listacontent.innerHTML =
-          "Não posso mostrar disciplinas de momento!";
+          "Não posso mostrar videos de momento!";
       } else {
-          newspapers = await response.json();
-        console.log(newspapers);
-        for (const newspaper of newspapers) {
-          texto += ` 
-                <div>
-            <h4>${newspaper.title}</h4>
-            &nbsp;&nbsp;&nbsp;Address: ${newspaper.url}
-            <p>Base: ${newspaper.source}</p>
-        </div>`;
-        }
-        listacontent.innerHTML = texto;
+          conteudo += ` 
+          <div id="container">
+            <!-- content -->
+            <div class="row">
+            <div class="col">
+            <div id="content">
+              <h2 ">Volleyball</h2>
+            </div>
+            </div>
+            </div>
+          </div>
+          <div class="row">
+          <div class="col">
+          <iframe width="1500" height="700" src="https://www.youtube.com/embed/Zf-bcG5IRIk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          </div>`;
+        listacontent.innerHTML = conteudo;
       }
     });
     })();
