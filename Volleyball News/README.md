@@ -1,4 +1,5 @@
-﻿API Volleyball News
+#VolleyballNewsAPI
+
 Nesta API conseguimos ver notícias sobre volleyball.
 
 Instruções de utilização:
