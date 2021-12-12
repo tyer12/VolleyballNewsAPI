@@ -11,11 +11,13 @@ Baixar o ficheiro .zip
 
 
 Restrições:
+
 -Um utilizador sem login efetuado apenas consegue visualizar a página inicial(Home) e o video(LiveStream)
 -Um utilizador registado e com login efetuado tem acesso as notícias
 
 
 Registo de utilizador:
+
 -Após inserir os dados de registo e pressionar submeter irá ser enviado um link para a consola do Visual Studio Code.
 -Pressionar ctrl e clicar no link, ao mesmo tempo, para poder aceder ao site.
 -Copiar o link
